@@ -1,1 +1,23 @@
-*/.idea
+# Ignore .idea folder (IntelliJ IDEA settings)
+.idea/
+
+# Ignore .NET build folders
+obj/
+bin/
+
+# Ignore other system files
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+desktop.ini
+
+# Ignore log files
+*.log
