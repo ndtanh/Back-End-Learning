@@ -1,4 +1,4 @@
-namespace ConsoleApp1;
+namespace ObserverDesignPattern;
 
 //Step 4: Implement Concrete Observers
 public class Customer : IObserver

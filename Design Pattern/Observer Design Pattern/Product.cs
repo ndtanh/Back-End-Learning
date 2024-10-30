@@ -1,4 +1,4 @@
-namespace ConsoleApp1;
+namespace ObserverDesignPattern;
 // Step 3: Implement the Concrete Subject
 
 public class Product : ISubject
