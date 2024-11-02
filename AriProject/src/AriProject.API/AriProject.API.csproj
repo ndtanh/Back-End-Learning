@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+      <RootNamespace>AriProject.API</RootNamespace>
+    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <UserSecretsId>54e8eb06-aaa1-4fff-9f05-3ced1cb623c2</UserSecretsId>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Compile Remove="AriProject.Domain\**" />
+    <Content Remove="logs\**" />
+    <Content Remove="AriProject.Domain\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <EmbeddedResource Remove="AriProject.Domain\**" />
+    <None Remove="logs\**" />
+    <None Remove="AriProject.Domain\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Autofac.Extras.CommonServiceLocator" Version="5.0.0" />
+    <PackageReference Include="Dapper" Version="2.0.30" />
+    <PackageReference Include="FluentValidation" Version="8.6.1" />
+    <PackageReference Include="Hellang.Middleware.ProblemDetails" Version="3.1.0" />
+    <PackageReference Include="MediatR" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
+    <PackageReference Include="Quartz" Version="3.0.7" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AriProject.Application\AriProject.Application.csproj" />
+    <ProjectReference Include="..\AriProject.Infrastructure\AriProject.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.Production.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="hosting.Production.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="hosting.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="hosting.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Publish\web.config" />
+    <_ContentIncludedByDefault Remove="Publish\AriProject.API.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="Publish\hosting.Development.json" />
+    <_ContentIncludedByDefault Remove="Publish\hosting.json" />
+    <_ContentIncludedByDefault Remove="Publish\hosting.Production.json" />
+    <_ContentIncludedByDefault Remove="Publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="Publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="Publish\appsettings.Production.json" />
+    <_ContentIncludedByDefault Remove="Publish\AriProject.API.deps.json" />
+  </ItemGroup>
+
+</Project>
