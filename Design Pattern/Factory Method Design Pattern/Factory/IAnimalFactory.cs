@@ -4,5 +4,5 @@ using Factory_Method_Design_Pattern.Animal;
 
 public interface IAnimalFactory
 {
-    public abstract IAnimal? CreateAnimal();
+    IAnimal? CreateAnimal();
 }
